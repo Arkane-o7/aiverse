@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AI Verse is a live masterclass series where students and builders learn to use AI agents, coding tools, and open-source systems by building real projects." />
+  <meta name="theme-color" content="#050b18" />
+  <meta property="og:title" content="AI Verse | Build with AI" />
+  <meta property="og:description" content="Live, practical AI masterclasses for builders." />
+  <meta property="og:type" content="website" />
+  <title>AI Verse | Live AI Masterclasses</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="noise" aria-hidden="true"></div>
+  <div class="scanlines" aria-hidden="true"></div>
+  <canvas id="starfield" aria-hidden="true"></canvas>
+
+  <header class="site-header" data-glass>
+    <a class="brand" href="#top" aria-label="AI Verse home">
+      <span class="brand-mark" aria-hidden="true">
+        <span></span><span></span><span></span><span></span>
+      </span>
+      <span>AI<span>VERSE</span></span>
+    </a>
+
+    <button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+      <a href="#missions">Missions</a>
+      <a href="#protocol">Protocol</a>
+      <a href="#archive">Archive</a>
+      <a href="#about">About</a>
+    </nav>
+
+    <a class="pixel-button pixel-button--small header-cta" href="#join">
+      <span>Join next class</span>
+      <span aria-hidden="true">↗</span>
+    </a>
+  </header>
+
+  <main id="main">
+    <section id="top" class="hero section-shell">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">LIVE AI MASTERCLASSES FOR BUILDERS</p>
+        <h1>
+          ENTER THE<br />
+          <span class="glitch" data-text="AI VERSE">AI VERSE</span>
+        </h1>
+        <p class="hero-subtitle">
+          Learn the tools shaping the next era of software. Build with coding agents, run open-source AI systems locally, and leave every session with something real.
+        </p>
+
+        <div class="hero-actions">
+          <a class="pixel-button" href="#join">
+            <span>Reserve a seat</span>
+            <span aria-hidden="true">→</span>
+          </a>
+          <a class="text-link" href="#archive">
+            <span class="play-icon" aria-hidden="true">▶</span>
+            Explore past missions
+          </a>
+        </div>
+
+        <div class="hero-metrics" aria-label="AI Verse statistics">
+          <div>
+            <strong class="metric-infinity" aria-label="Infinity">
+              <svg viewBox="0 0 60 24" aria-hidden="true" focusable="false" shape-rendering="crispEdges">
+                <path d="M8 0h8v4H8zm36 0h8v4h-8zM4 4h4v4H4zm12 0h8v4h-8zm20 0h8v4h-8zm16 0h4v4h-4zM0 8h4v8H0zm24 0h12v8H24zm32 0h4v8h-4zM4 16h4v4H4zm12 0h8v4h-8zm20 0h8v4h-8zm16 0h4v4h-4zM8 20h8v4H8zm36 0h8v4h-8z" />
+              </svg>
+            </strong>
+            <span>THINGS TO BE BUILT</span>
+          </div>
+          <div>
+            <strong>LIVE</strong>
+            <span>BUILD-ALONG FORMAT</span>
+          </div>
+          <div>
+            <strong>₹0</strong>
+            <span>BUILDER-FIRST ACCESS</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal" aria-label="Pixel art AI Verse robot host">
+        <div class="robot-stage">
+          <div class="robot-aura" aria-hidden="true"></div>
+
+          <div class="aiverse-robot aiverse-robot--image" id="aiverse-robot">
+            <div class="robot-crt-face" aria-hidden="true">
+              <span class="robot-crt-face__eye robot-crt-face__eye--left"></span>
+              <span class="robot-crt-face__eye robot-crt-face__eye--right"></span>
+              <span class="robot-crt-face__mouth"></span>
+            </div>
+            <div class="robot-crt-terminal" aria-hidden="true">
+              <div class="robot-crt-terminal__content">
+                <div class="robot-crt-terminal__line">
+                  <span class="robot-crt-terminal__prompt">visitor@aiverse:~$</span>
+                  <span id="typed-line" class="robot-crt-terminal__typed">learn by building</span>
+                  <span class="robot-crt-terminal__cursor"></span>
+                </div>
+              </div>
+            </div>
+            <img
+              class="aiverse-robot-image"
+              src="assets/aiverse-tv-host-cutout.png"
+              alt="Pixel-art AI Verse host with a CRT television head displaying a terminal"
+            />
+          </div>
+
+          <div class="floating-chip floating-chip--one"><span>01</span> AGENTS</div>
+          <div class="floating-chip floating-chip--two"><span>02</span> LOCAL AI</div>
+          <div class="floating-chip floating-chip--three"><span>03</span> BUILDERS</div>
+        </div>
+      </div>
+
+      <div class="scroll-cue" aria-hidden="true">
+        <span>SCROLL TO EXPLORE</span>
+        <i></i>
+      </div>
+
+    </section>
+
+    <section class="ticker-strip" aria-label="Topics covered">
+      <div class="ticker-track">
+        <span>AGENTIC CODING</span><i>✦</i><span>OPEN-SOURCE AI</span><i>✦</i><span>LIVE BUILDS</span><i>✦</i><span>LOCAL AGENTS</span><i>✦</i><span>REAL PROJECTS</span><i>✦</i>
+        <span>AGENTIC CODING</span><i>✦</i><span>OPEN-SOURCE AI</span><i>✦</i><span>LIVE BUILDS</span><i>✦</i><span>LOCAL AGENTS</span><i>✦</i><span>REAL PROJECTS</span><i>✦</i>
+      </div>
+    </section>
+
+    <section id="missions" class="missions section-shell section-spacing">
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow">MISSION SELECT</p>
+          <h2>Choose your next<br /><span>skill upgrade.</span></h2>
+        </div>
+        <p>Every AI Verse session is practical, beginner-friendly, and designed around one outcome: you should finish with a working build, not a folder full of screenshots.</p>
+      </div>
+
+      <div class="mission-grid">
+        <article class="mission-card mission-card--featured reveal">
+          <div class="mission-image mission-image--agents" aria-hidden="true">
+            <div class="pixel-grid"></div>
+            <div class="terminal-art">
+              <div><span class="prompt">›</span> define mission</div>
+              <div><span class="prompt">›</span> delegate tasks</div>
+              <div><span class="prompt">›</span> review diff</div>
+              <div class="terminal-success">✓ application shipped</div>
+            </div>
+            <div class="agent-node node-a">A</div>
+            <div class="agent-node node-b">B</div>
+            <div class="agent-node node-c">C</div>
+            <svg class="node-lines" viewBox="0 0 500 260" preserveAspectRatio="none">
+              <path d="M102 60 L250 125 L400 54 M250 125 L410 210 M250 125 L95 208" />
+            </svg>
+          </div>
+          <div class="mission-card__body">
+            <div class="card-meta">
+              <span>MISSION 001</span>
+              <span class="tag tag--complete">COMPLETED</span>
+            </div>
+            <h3>Vibe Coding with AI Agents</h3>
+            <p>Move beyond autocomplete. Learn how to plan, delegate, review, and ship software with tools such as Codex, Claude Code, and agentic IDE workflows.</p>
+            <ul class="mission-points">
+              <li>Agent-first development workflow</li>
+              <li>Prompting for multi-file changes</li>
+              <li>Debugging and reviewing AI output</li>
+            </ul>
+            <button class="card-link" type="button" data-modal-open="mission-1">Open mission log <span>↗</span></button>
+          </div>
+        </article>
+
+        <article class="mission-card reveal">
+          <div class="mission-image mission-image--openclaw" aria-hidden="true">
+            <div class="orb orb--1"></div><div class="orb orb--2"></div><div class="orb orb--3"></div>
+            <div class="claw-console">
+              <span>OPENCLAW://LOCAL</span>
+              <div class="claw-face">
+                <i></i><i></i>
+                <b></b>
+              </div>
+              <small>STATUS: RUNNING</small>
+            </div>
+            <div class="signal-bars"><i></i><i></i><i></i><i></i></div>
+          </div>
+          <div class="mission-card__body">
+            <div class="card-meta">
+              <span>MISSION 002</span>
+              <span class="tag tag--complete">COMPLETED</span>
+            </div>
+            <h3>Run OpenClaw Agents Locally</h3>
+            <p>Set up a capable open-source agent on your own machine, connect a model, configure tools, and understand the architecture behind local agent systems.</p>
+            <ul class="mission-points">
+              <li>Local environment setup</li>
+              <li>Models, tools, and permissions</li>
+              <li>First autonomous task</li>
+            </ul>
+            <button class="card-link" type="button" data-modal-open="mission-2">Open mission log <span>↗</span></button>
+          </div>
+        </article>
+
+        <article class="mission-card mission-card--locked reveal">
+          <div class="mission-image mission-image--locked" aria-hidden="true">
+            <div class="lock-pixel">
+              <div class="lock-loop"></div>
+              <div class="lock-body"><span></span></div>
+            </div>
+            <div class="question-pixels">???</div>
+          </div>
+          <div class="mission-card__body">
+            <div class="card-meta">
+              <span>MISSION 003</span>
+              <span class="tag tag--incoming">INCOMING</span>
+            </div>
+            <h3>Next Portal Opening Soon</h3>
+            <p>Agent memory, MCP, local models, or something stranger. Join the transmission list and help choose the next class.</p>
+            <ul class="mission-points">
+              <li>Community-voted topic</li>
+              <li>Live build from zero</li>
+              <li>Resources and replay notes</li>
+            </ul>
+            <a class="card-link" href="#join">Vote for the next topic <span>→</span></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="protocol" class="protocol section-shell section-spacing">
+      <div class="protocol-window reveal">
+        <div class="window-bar window-bar--light">
+          <span>LEARNING_PROTOCOL.TXT</span>
+          <div class="window-controls window-controls--dark" aria-hidden="true"><i></i><i></i><i></i></div>
+        </div>
+        <div class="protocol-content">
+          <div class="protocol-copy">
+            <p class="eyebrow">THE AI VERSE PROTOCOL</p>
+            <h2>No passive watching.<br /><span>You build alongside us.</span></h2>
+            <p>AI changes too quickly for textbook-only learning. AI Verse turns each topic into a live expedition: enough theory to understand the system, then straight into the terminal.</p>
+            <a class="text-link text-link--dark" href="#join">Enter the next cohort <span>→</span></a>
+          </div>
+
+          <ol class="protocol-steps">
+            <li>
+              <span class="step-number">01</span>
+              <div><strong>DECODE</strong><p>Understand what the tool actually does, where it works, and where the hype ends.</p></div>
+            </li>
+            <li>
+              <span class="step-number">02</span>
+              <div><strong>BUILD</strong><p>Follow a live, end-to-end implementation with room to experiment and break things safely.</p></div>
+            </li>
+            <li>
+              <span class="step-number">03</span>
+              <div><strong>SHIP</strong><p>Leave with a working project, repeatable workflow, and the confidence to keep building.</p></div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section id="archive" class="archive section-shell section-spacing">
+      <div class="section-heading section-heading--compact reveal">
+        <div>
+          <p class="eyebrow">MISSION ARCHIVE</p>
+          <h2>Previously, in<br /><span>the AI Verse.</span></h2>
+        </div>
+        <p>The archive is just getting started.</p>
+      </div>
+
+      <div class="archive-list">
+        <button class="archive-row reveal" type="button" data-modal-open="mission-1">
+          <span class="archive-index">001</span>
+          <span class="archive-title">Agentic AI for Coding</span>
+          <span class="archive-topic">VIBE CODING</span>
+          <span class="archive-status"><i></i> COMPLETE</span>
+          <span class="archive-arrow">↗</span>
+        </button>
+        <button class="archive-row reveal" type="button" data-modal-open="mission-2">
+          <span class="archive-index">002</span>
+          <span class="archive-title">OpenClaw Agents on Your Machine</span>
+          <span class="archive-topic">LOCAL AGENTS</span>
+          <span class="archive-status"><i></i> COMPLETE</span>
+          <span class="archive-arrow">↗</span>
+        </button>
+        <div class="archive-row archive-row--ghost reveal">
+          <span class="archive-index">003</span>
+          <span class="archive-title">Classified Until Decryption</span>
+          <span class="archive-topic">COMMUNITY PICK</span>
+          <span class="archive-status archive-status--pending"><i></i> PENDING</span>
+          <span class="archive-arrow">···</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about section-shell section-spacing">
+      <div class="about-grid">
+        <div class="about-art reveal" aria-hidden="true">
+          <div class="about-monitor">
+            <div class="monitor-screen">
+              <div class="mini-logo">AI<br /><span>VERSE</span></div>
+              <div class="monitor-grid"></div>
+              <div class="cursor-block"></div>
+            </div>
+            <div class="monitor-base"></div>
+          </div>
+          <div class="pixel-speech">BUILD THE FUTURE<br />BEFORE IT ARRIVES.</div>
+        </div>
+
+        <div class="about-copy reveal">
+          <p class="eyebrow">WHY AI VERSE EXISTS</p>
+          <h2>AI should feel less like magic and more like <span>something you can build with.</span></h2>
+          <p>AI Verse is an independent masterclass series for students, developers, designers, and curious builders. The sessions are technical enough to be useful, but approachable enough to start before you feel ready.</p>
+          <p>AI Verse began with live sessions on agentic coding and running OpenClaw agents locally. This website is the launchpad for everything that comes next.</p>
+
+          <div class="about-values">
+            <div><span>01</span><strong>Practical over performative</strong></div>
+            <div><span>02</span><strong>Open tools over black boxes</strong></div>
+            <div><span>03</span><strong>Builders over spectators</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="join" class="join section-shell section-spacing">
+      <div class="join-panel reveal">
+        <div class="join-copy">
+          <p class="eyebrow">OPEN TRANSMISSION</p>
+          <h2>Get the next mission<br /><span>in your inbox.</span></h2>
+          <p>Be first to know when registrations open. You will also get the topic vote, build notes, and replay links.</p>
+        </div>
+
+        <form id="join-form" class="join-form" novalidate>
+          <label for="name">BUILDER NAME</label>
+          <input id="name" name="name" type="text" autocomplete="name" placeholder="Your name" required />
+          <label for="email">TRANSMISSION ADDRESS</label>
+          <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required />
+          <label for="topic">NEXT TOPIC VOTE</label>
+          <select id="topic" name="topic">
+            <option value="Agent Memory">Agent Memory</option>
+            <option value="MCP">Model Context Protocol</option>
+            <option value="Local Models">Running Local Models</option>
+            <option value="AI Automation">AI Automation Systems</option>
+          </select>
+          <button class="pixel-button pixel-button--wide" type="submit">
+            <span>Join transmission</span>
+            <span aria-hidden="true">→</span>
+          </button>
+          <p class="form-note">NO SPAM. NO DATA QUESTS. JUST NEW MISSIONS.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer section-shell">
+    <div class="footer-brand">
+      <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span><span>AI<span>VERSE</span></span></a>
+      <p>Live AI masterclasses for people who would rather build than merely bookmark.</p>
+    </div>
+    <div class="footer-links">
+      <a href="#missions">Missions</a>
+      <a href="#protocol">Protocol</a>
+      <a href="#archive">Archive</a>
+      <a href="#join">Join</a>
+    </div>
+    <div class="footer-system">
+      <span><i></i> ALL SYSTEMS OPERATIONAL</span>
+      <small>© <span id="year"></span> AI VERSE</small>
+    </div>
+  </footer>
+
+  <dialog id="mission-1" class="mission-modal">
+    <button class="modal-close" type="button" aria-label="Close mission log">×</button>
+    <p class="eyebrow">MISSION LOG 001</p>
+    <h2>Vibe Coding with AI Agents</h2>
+    <p>A practical introduction to building software with coding agents rather than using AI as a smarter autocomplete box.</p>
+    <div class="modal-grid">
+      <div><span>FORMAT</span><strong>Live online build</strong></div>
+      <div><span>LEVEL</span><strong>Beginner friendly</strong></div>
+      <div><span>STATUS</span><strong>Completed</strong></div>
+      <div><span>TOOLS</span><strong>VS Code, Codex, Claude Code</strong></div>
+    </div>
+    <h3>What builders explored</h3>
+    <ul>
+      <li>Turning a rough product idea into an executable task plan</li>
+      <li>Using agents for multi-file changes, debugging, and iteration</li>
+      <li>Reviewing generated code instead of trusting it blindly</li>
+    </ul>
+    <a class="pixel-button pixel-button--wide" href="#join" data-modal-jump><span>Get the next mission</span><span>→</span></a>
+  </dialog>
+
+  <dialog id="mission-2" class="mission-modal">
+    <button class="modal-close" type="button" aria-label="Close mission log">×</button>
+    <p class="eyebrow">MISSION LOG 002</p>
+    <h2>Run OpenClaw Agents Locally</h2>
+    <p>A guided setup session for running an open-source agent on your own machine and understanding the pieces underneath the interface.</p>
+    <div class="modal-grid">
+      <div><span>FORMAT</span><strong>Live online setup</strong></div>
+      <div><span>LEVEL</span><strong>Beginner to intermediate</strong></div>
+      <div><span>STATUS</span><strong>Completed</strong></div>
+      <div><span>FOCUS</span><strong>Local agent systems</strong></div>
+    </div>
+    <h3>What builders explored</h3>
+    <ul>
+      <li>Installing and configuring the local agent stack</li>
+      <li>Connecting models, tools, and environment permissions</li>
+      <li>Running a first task and debugging common setup issues</li>
+    </ul>
+    <a class="pixel-button pixel-button--wide" href="#join" data-modal-jump><span>Get the next mission</span><span>→</span></a>
+  </dialog>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
