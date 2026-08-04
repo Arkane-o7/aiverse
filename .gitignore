@@ -1,3 +1,5 @@
 .DS_Store
 .playwright-mcp/
 hero-current.png
+.vercel
+.env*.local
