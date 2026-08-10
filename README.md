@@ -1,6 +1,22 @@
 # AI Verse Website
 
+![Stack](https://img.shields.io/badge/stack-HTML%20%2B%20CSS%20%2B%20JavaScript-f59e0b)
+![Build](https://img.shields.io/badge/build-none-22c55e)
+![Style](https://img.shields.io/badge/style-pixel%20art-8b5cf6)
+
 A responsive, single-page pixel-art website for the AI Verse live masterclass series.
+
+<p align="center">
+  <img src="assets/aiverse-tv-head.png" alt="AI Verse pixel-art television" width="420">
+</p>
+
+```mermaid
+flowchart LR
+    A[Visitor lands on hero] --> B[Explore masterclass missions]
+    B --> C[Open mission details]
+    C --> D[Submit registration interest]
+    D --> E[Connect a real form backend]
+```
 
 ## Included
 
